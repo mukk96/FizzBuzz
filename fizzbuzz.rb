@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# encoding: utf-8
 
 def fizzbuzz(n)
     if( n % 15 == 0 )
