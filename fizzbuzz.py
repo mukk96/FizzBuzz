@@ -3,15 +3,14 @@
 
 def fizzbuzz(n):
     if n % 15 == 0:
-        print("FizzBuzz")
+        return "FizzBuzz"
     elif n % 3 == 0:
-        print("Fizz")
+        return "Fizz"
     elif n % 5 == 0:
-        print("Buzz")
+        return "Buzz"
     else:
-        print(n)
+        return str(n)
 
-
-for i in range(1, 101):
-    fizzbuzz(i)
-
+if __name__ == "__main__":
+    for i in range(1, 101):
+        print(fizzbuzz(i))

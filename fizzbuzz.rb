@@ -2,20 +2,22 @@
 # encoding: utf-8
 
 def fizzbuzz(n)
-    if( n % 15 == 0 )
-        puts("FizzBuzz")
-    elsif( n % 3 == 0 )
-        puts("Fizz")
-    elsif( n % 5 == 0 )
-        puts("Buzz")
+    if n % 15 == 0
+        return "FizzBuzz"
+    elsif n % 3 == 0 
+        return "Fizz"
+    elsif n % 5 == 0 
+        return "Buzz"
     else
-        puts(n.to_s)
+        return n.to_s
     end
 end
 
 
-(1..100).each do |n|
-    fizzbuzz(n)
+if $0 == __FILE__
+    (1..100).each do |i|
+        puts fizzbuzz(i)
+    end
 end
 
 

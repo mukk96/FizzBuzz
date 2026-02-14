@@ -1,19 +1,22 @@
-public class FizzBuzz {
-    public static void main(String[] args) {
+public class FizzBuzz
+{
+    public static void main(String[] args)
+    {
         for(int i = 1; i <= 100; i++){
-            judgeFizzBuzz(i);
+            System.out.println(judgeFizzBuzz(i));
         }
     }
 
-    public static void judgeFizzBuzz(int n){
+    public static final String judgeFizzBuzz(int n)
+    {
         if( n % 15 == 0 ){
-            System.out.println("FizzBuzz");
+            return "FizzBuzz";
         }else if( n % 3 == 0 ){
-            System.out.println("Fizz");
+            return "Fizz";
         }else if( n % 5 == 0 ){
-            System.out.println("Buzz");
+            return "Buzz";
         }else{
-            System.out.println(n);
+            return Integer.toString(n);
         }
     }
 }

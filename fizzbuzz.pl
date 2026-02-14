@@ -1,22 +1,27 @@
 #!/usr/bin/perl
 # encoding: utf-8
 
+use strict;
+
 sub fizzbuzz
 {
     my $n = shift @_;
 
     if( $n % 15 == 0 ){
-        print "FizzBuzz\n" ;
+        return "FizzBuzz";
     }elsif( $n % 3 == 0 ){
-        print "Fizz\n";
+        return "Fizz";
     }elsif( $n % 5 == 0 ){
-        print "Buzz\n";
+        return "Buzz";
     }else{
-        print $n . "\n";
+        return "$n";
     }
 }
 
-
-for($i = 1; $i <= 100; $i++){
-    &fizzbuzz($i);
+if( $0 eq __FILE__ )
+{
+    my $i;
+    for($i = 1; $i <= 100; $i++){
+        printf("%s\n", &fizzbuzz($i));
+    }
 }
